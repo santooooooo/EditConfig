@@ -33,3 +33,10 @@ nmap mm :nohlsearch<CR><Esc>
 inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
+colorscheme peachpuff
+noremap 9 $
+
+" setting for php
+autocmd Filetype php inoremap < <><Left>
+autocmd Filetype php inoremap ?<Enter> ?php?<Left><CR><ESC><S-o>
+autocmd Filetype php inoremap f<Enter> ;<Left><ESC>
