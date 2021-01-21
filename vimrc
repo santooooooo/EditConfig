@@ -35,6 +35,7 @@ inoremap " ""<Left>
 inoremap ' ''<Left>
 colorscheme peachpuff
 noremap 9 $
+set encoding=utf-8
 
 " setting for php
 autocmd Filetype php inoremap < <><Left>
