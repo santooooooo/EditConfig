@@ -14,6 +14,8 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'ekalinin/Dockerfile.vim'
 
+Plugin 'universal-ctags/ctags'
+
 call vundle#end()            " required
 filetype plugin indent on    " requiredj
 
@@ -35,7 +37,6 @@ inoremap " ""<Left>
 inoremap ' ''<Left>
 colorscheme peachpuff
 noremap 9 $
-set encoding=utf-8
 
 " setting for php
 autocmd Filetype php inoremap < <><Left>
