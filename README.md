@@ -8,3 +8,5 @@ https://github.com/alvan/vim-closetag
 https://github.com/preservim/nerdtree 
 
 https://github.com/VundleVim/Vundle.vim 
+
+https://github.com/posva/vim-vue
