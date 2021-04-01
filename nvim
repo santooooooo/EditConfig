@@ -12,8 +12,6 @@ let g:closetag_filenames = '*.html,*.vue,*.php'
 
 Plugin 'preservim/nerdtree'
 
-Plugin 'universal-ctags/ctags'
-
 Plugin 'posva/vim-vue'
 
 "Plugin for newvim"
