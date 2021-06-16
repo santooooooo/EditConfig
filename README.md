@@ -1,4 +1,4 @@
-# GitRepository for Vim
+# GitRepository for Vim and NeoVim
 This is my setting of vim.
 
 Look at these links to run vim collectly.
