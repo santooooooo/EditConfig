@@ -42,7 +42,6 @@ inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
 colorscheme peachpuff
-noremap 9 $
 set autoread
 set noswapfile
 
