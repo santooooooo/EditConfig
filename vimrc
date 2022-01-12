@@ -12,19 +12,17 @@ let g:closetag_filenames = '*.html,*.vue,*.php'
 
 Plugin 'preservim/nerdtree'
 
-Plugin 'ekalinin/Dockerfile.vim'
-
 Plugin 'universal-ctags/ctags'
 
 Bundle 'flyinshadow/php_localvarcheck.vim'
-
-Plugin 'ncm2/ncm2'
 
 call vundle#end()            " required
 filetype plugin indent on    " requiredj
 
 call plug#begin()
+
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
 call plug#end()
 
 set number
@@ -58,7 +56,12 @@ function! PhpForm() abort
   return system("~/.config/composer/vendor/bin/phpcbf ". expand("%"))
 endfunction
 
+function! LaravelTest() abort
+  return system("php artisan test ". expand("%"))
+endfunction
+
 autocmd Filetype php nnoremap ^ :echo PhpForm()
+autocmd Filetype php nnoremap t :echo LaravelTest()
 
 autocmd FileType php setlocal omnifunc=phpactor#Complete
 autocmd FileType php inoremap c<Enter> <C-x><C-o>
