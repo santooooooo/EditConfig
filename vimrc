@@ -57,11 +57,19 @@ function! PhpForm() abort
 endfunction
 
 function! LaravelTest() abort
-  return system("php artisan test ". expand("%"))
+	return system("php artisan test ". expand("%"))
 endfunction
 
-autocmd Filetype php nnoremap ^ :echo PhpForm()
-autocmd Filetype php nnoremap t :echo LaravelTest()
+autocmd Filetype php nnoremap ^ :<C-u>call PhpForm()<CR>
+autocmd Filetype php nnoremap t :<C-u>call LaravelTest()<CR>
 
 autocmd FileType php setlocal omnifunc=phpactor#Complete
 autocmd FileType php inoremap c<Enter> <C-x><C-o>
+
+function! DefinitionJumpWithPhpactor()
+    vsplit
+    call phpactor#GotoDefinition()
+endfunction
+
+autocmd Filetype php nnoremap go :<C-u>call DefinitionJumpWithPhpactor()<CR>
+autocmd Filetype php nnoremap cc :<C-u>call phpactor#ClassNew()<CR>
