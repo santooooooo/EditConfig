@@ -18,3 +18,15 @@ https://github.com/posva/vim-vue
 https://github.com/squizlabs/PHP_CodeSniffer
 
 https://github.com/phpactor/phpactor
+
+https://github.com/phpactor/ncm2-phpactor
+
+## informations for setting
+https://vimawesome.com/plugin/vim-hug-neovim-rpc
+
+https://teratail.com/questions/279373#reply-397753
+
+https://qiita.com/Lovely_030_Dong/items/672e0e98a5de11923f34
+
+https://github.com/neovim/pynvim
+
