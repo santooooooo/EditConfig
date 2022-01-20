@@ -20,10 +20,18 @@ call vundle#end()            " required
 filetype plugin indent on    " requiredj
 
 call plug#begin()
-
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'phpactor/ncm2-phpactor'
+Plug 'roxma/vim-hug-neovim-rpc'
+
 call plug#end()
+
+let g:python3_host_prog = '/usr/bin/python3'
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
 set number
 set list
@@ -48,14 +56,17 @@ nnoremap @ :e!<CR><Esc>
 nnoremap - :vert term<CR><Esc>
 
 " setting for php
-autocmd Filetype php inoremap < <><Left>
+autocmd Filetype php inoremap <<Enter> <><Left>
 autocmd Filetype php inoremap ?<Enter> ?php?<Left><CR><ESC><S-o>
-autocmd Filetype php inoremap f<Enter> ;<Left><ESC>
+autocmd Filetype php inoremap if<Enter> if() {<CR>}<Up><Right><Right>
+autocmd Filetype php inoremap else<Enter> else {<CR>}<Up><End>
 
+"setting for php-format
 function! PhpForm() abort
   return system("~/.config/composer/vendor/bin/phpcbf ". expand("%"))
 endfunction
 
+"setting for laravel-test
 function! LaravelTest() abort
 	return system("php artisan test ". expand("%"))
 endfunction
@@ -63,9 +74,14 @@ endfunction
 autocmd Filetype php nnoremap ^ :<C-u>call PhpForm()<CR>
 autocmd Filetype php nnoremap t :<C-u>call LaravelTest()<CR>
 
+" settring for auto-complete
 autocmd FileType php setlocal omnifunc=phpactor#Complete
 autocmd FileType php inoremap c<Enter> <C-x><C-o>
+let g:python3_host_prog = '/usr/bin/python3'
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
+" settring for something for php
 function! DefinitionJumpWithPhpactor()
     vsplit
     call phpactor#GotoDefinition()
