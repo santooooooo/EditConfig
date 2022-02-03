@@ -21,6 +21,8 @@ https://github.com/phpactor/phpactor
 
 https://github.com/phpactor/ncm2-phpactor
 
+https://github.com/prettier/vim-prettier
+
 ## informations for setting
 https://vimawesome.com/plugin/vim-hug-neovim-rpc
 
