@@ -20,12 +20,17 @@ call vundle#end()            " required
 filetype plugin indent on    " requiredj
 
 call plug#begin()
+" for phactor and completion
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
-
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'phpactor/ncm2-phpactor'
 Plug 'roxma/vim-hug-neovim-rpc'
+
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 call plug#end()
 
@@ -90,7 +95,6 @@ endfunction
 autocmd Filetype php nnoremap go :<C-u>call DefinitionJumpWithPhpactor()<CR>
 autocmd Filetype php nnoremap cc :<C-u>call phpactor#ClassNew()<CR>
 
-" add '' to text
 function! ChangeToTextData() abort
 	let tmp = @@
 	silent normal gvy
