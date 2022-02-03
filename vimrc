@@ -89,3 +89,18 @@ endfunction
 
 autocmd Filetype php nnoremap go :<C-u>call DefinitionJumpWithPhpactor()<CR>
 autocmd Filetype php nnoremap cc :<C-u>call phpactor#ClassNew()<CR>
+
+" add '' to text
+function! ChangeToTextData() abort
+	let tmp = @@
+	silent normal gvy
+	let selected = @@
+	let @@ = tmp
+	let test = "'".selected."'"
+	let line = line(".")
+	execute ":".line.",".line." substitute/".selected."/".test
+	return
+endfunction
+
+vnoremap ' :call ChangeToTextData()
+
