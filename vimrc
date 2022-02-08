@@ -86,7 +86,7 @@ let g:python3_host_prog = '/usr/bin/python3'
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
-" settring for something for php
+" setting for php
 function! DefinitionJumpWithPhpactor()
     vsplit
     call phpactor#GotoDefinition()
@@ -108,3 +108,8 @@ endfunction
 
 vnoremap ' :call ChangeToTextData()
 
+" settring for js and vue
+autocmd FileType js nnoremap <Enter> :Prettier <Enter>
+autocmd FileType vue nnoremap <Enter> :Prettier <Enter>
+
+nnoremap N :NERDTree <Enter>
