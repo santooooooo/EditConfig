@@ -112,4 +112,4 @@ vnoremap ' :call ChangeToTextData()
 autocmd FileType js nnoremap <Enter> :Prettier <Enter>
 autocmd FileType vue nnoremap <Enter> :Prettier <Enter>
 
-nnoremap N :NERDTree <Enter>
+nnoremap // :NERDTree <Enter>
