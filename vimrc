@@ -14,6 +14,8 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'universal-ctags/ctags'
 
+Plugin 'posva/vim-vue'
+
 Bundle 'flyinshadow/php_localvarcheck.vim'
 
 call vundle#end()            " required
@@ -32,6 +34,7 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 let g:python3_host_prog = '/usr/bin/python3'
@@ -112,4 +115,4 @@ vnoremap ' :call ChangeToTextData()
 autocmd FileType js nnoremap <Enter> :Prettier <Enter>
 autocmd FileType vue nnoremap <Enter> :Prettier <Enter>
 
-nnoremap // :NERDTree <Enter>
+nnoremap ]] :NERDTree <Enter>
