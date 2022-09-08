@@ -21,25 +21,25 @@ Bundle 'flyinshadow/php_localvarcheck.vim'
 call vundle#end()            " required
 filetype plugin indent on    " requiredj
 
-call plug#begin()
+""call plug#begin()
 " for phactor and completion
-Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'phpactor/ncm2-phpactor'
-Plug 'roxma/vim-hug-neovim-rpc'
+""Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+""Plug 'ncm2/ncm2'
+""Plug 'roxma/nvim-yarp'
+""Plug 'phpactor/ncm2-phpactor'
+""Plug 'roxma/vim-hug-neovim-rpc'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', {
+""Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
-Plug 'tpope/vim-commentary'
-call plug#end()
+"J"Plug 'tpope/vim-commentary'
+""call plug#end()
 
 let g:python3_host_prog = '/usr/bin/python3'
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
+""autocmd BufEnter * call ncm2#enable_for_buffer()
+""set completeopt=noinsert,menuone,noselect
 
 set number
 set list
@@ -86,7 +86,7 @@ autocmd Filetype php nnoremap t :<C-u>call LaravelTest()<CR>
 autocmd FileType php setlocal omnifunc=phpactor#Complete
 autocmd FileType php inoremap c<Enter> <C-x><C-o>
 let g:python3_host_prog = '/usr/bin/python3'
-autocmd BufEnter * call ncm2#enable_for_buffer()
+""autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
 " setting for php
