@@ -41,7 +41,7 @@ nmap mm :nohlsearch<CR><Esc>
 inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
-colorscheme peachpuff
+colorscheme darkblue
 set autoread
 set noswapfile
 
