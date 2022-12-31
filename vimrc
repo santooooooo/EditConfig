@@ -62,6 +62,7 @@ set autoread
 set noswapfile
 nnoremap @ :e!<CR><Esc>
 nnoremap - :vert term<CR><Esc>
+nnoremap ]] :NERDTree <Enter>
 
 " setting for php
 autocmd Filetype php inoremap <<Enter> <><Left>
@@ -114,5 +115,3 @@ vnoremap ' :call ChangeToTextData()
 " settring for js and vue
 autocmd FileType js nnoremap <Enter> :Prettier <Enter>
 autocmd FileType vue nnoremap <Enter> :Prettier <Enter>
-
-nnoremap ]] :NERDTree <Enter>
