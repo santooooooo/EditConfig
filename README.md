@@ -32,3 +32,7 @@ https://qiita.com/Lovely_030_Dong/items/672e0e98a5de11923f34
 
 https://github.com/neovim/pynvim
 
+## informations for ALE
+https://github.com/dense-analysis/ale
+https://rudra.dev/posts/setting-up-vim-for-react ←　大体はこっち見て
+
