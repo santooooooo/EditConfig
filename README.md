@@ -34,5 +34,6 @@ https://github.com/neovim/pynvim
 
 ## informations for ALE
 https://github.com/dense-analysis/ale
-https://rudra.dev/posts/setting-up-vim-for-react ←　大体はこっち見て
+https://rudra.dev/posts/setting-up-vim-for-react ←　実際のALEのインストール
+https://github.com/dense-analysis/ale/issues/887　←　Prettierのインストール
 
