@@ -33,7 +33,27 @@ https://qiita.com/Lovely_030_Dong/items/672e0e98a5de11923f34
 https://github.com/neovim/pynvim
 
 ## informations for ALE(React)
+
+**実行手順**
+1. ALE、Syntax用ツールをVundleでインストール
+```vim
+Plugin 'w0rp/ale'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+```
+
+2. npmでローカル内にeslint、prettierをインストール
+```terminal
+npm install eslint
+npm init @eslint/config
+npm install prettier
+```
+
+**参考資料**
+
 https://github.com/dense-analysis/ale
-https://rudra.dev/posts/setting-up-vim-for-react ←　実際のALEのインストール
-https://github.com/dense-analysis/ale/issues/887　←　Prettierのインストール
+
+https://rudra.dev/posts/setting-up-vim-for-react
+
+https://github.com/dense-analysis/ale/issues/887
 
