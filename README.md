@@ -42,11 +42,9 @@ Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 ```
 
-2. npmでローカル内にeslint、prettierをインストール
+2. reactプロジェクト作成後に以下のコマンドを実行
 ```terminal
-npm install eslint
-npm init @eslint/config
-npm install prettier
+npm install --save react-scripts@latest
 ```
 
 **参考資料**
@@ -56,4 +54,6 @@ https://github.com/dense-analysis/ale
 https://rudra.dev/posts/setting-up-vim-for-react
 
 https://github.com/dense-analysis/ale/issues/887
+
+https://betterprogramming.pub/upgrade-create-react-app-based-projects-to-version-4-cra-4-d7962aee11a6
 
