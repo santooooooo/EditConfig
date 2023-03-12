@@ -45,6 +45,7 @@ Plugin 'pangloss/vim-javascript'
 2. reactプロジェクト作成後に以下のコマンドを実行
 ```terminal
 npm install --save react-scripts@latest
+npm install eslint --save-dev
 npm install prettier
 ```
 
