@@ -69,7 +69,15 @@ call vundle#begin()
 Plugin 'w0rp/ale'
 call vundle#end()
 ```
-2. 設定の変更
+
+2. php-cs-fixerをインストール
+```terminal
+curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer
+sudo chmod a+x php-cs-fixer
+sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+```
+
+3. 設定の変更
 ```vim
 let g:ale_php_php_cs_fixer_executable='/usr/local/bin/php-cs-fixer'
 let g:ale_fixers = {'php': ['php_cs_fixer']}
@@ -77,4 +85,5 @@ let g:ale_fix_on_save = 1
 ```
 
 **参考資料**
+
 https://shiro-secret-base.com/?p=1095
