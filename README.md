@@ -41,6 +41,9 @@ call vundle#begin()
 Plugin 'w0rp/ale'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+
+" TypeScriptを使用する場合
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()
 ```
 
