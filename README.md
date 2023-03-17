@@ -37,9 +37,11 @@ https://github.com/neovim/pynvim
 **実行手順**
 1. ALE、Syntax用ツールをVundleでインストール
 ```vim
+call vundle#begin()
 Plugin 'w0rp/ale'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+call vundle#end()
 ```
 
 2. reactプロジェクト作成後に以下のコマンドを実行
@@ -59,3 +61,20 @@ https://github.com/dense-analysis/ale/issues/887
 
 https://betterprogramming.pub/upgrade-create-react-app-based-projects-to-version-4-cra-4-d7962aee11a6
 
+
+## informations for ALE(Composerを使用しないでPHPのフォーマットを使用する場合)
+1. ALEをVundleでインストール
+```vim
+call vundle#begin()
+Plugin 'w0rp/ale'
+call vundle#end()
+```
+2. 設定の変更
+```vim
+let g:ale_php_php_cs_fixer_executable='/usr/local/bin/php-cs-fixer'
+let g:ale_fixers = {'php': ['php_cs_fixer']}
+let g:ale_fix_on_save = 1
+```
+
+**参考資料**
+https://shiro-secret-base.com/?p=1095
