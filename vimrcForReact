@@ -8,9 +8,21 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'alvan/vim-closetag'
-let g:closetag_filenames = '*.html,*.vue,*.php'
+let g:closetag_filenames = '*.html,*.vue,*.php,*.js,*.ts,*.tsx'
+let g:closetag_regions =  {
+\ 'typescript.tsx': 'jsxRegion,tsxRegion',
+\ 'javascript.jsx': 'jsxRegion',
+\ }
 
 Plugin 'preservim/nerdtree'
+
+"" React用のプラグイン
+Plugin 'w0rp/ale'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+
+"" TypeScript用のプラグイン
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " requiredj
@@ -19,7 +31,6 @@ filetype plugin indent on    " requiredj
 ""call plug#end()
 
 set number
-set list
 set title
 set fenc=utf-8
 set cursorline
@@ -39,5 +50,25 @@ set autoread
 set noswapfile
 nnoremap @ :e!<CR><Esc>
 nnoremap - :vert term<CR><Esc>
-nnoremap ]] :NERDTree <Enter>
+inoremap if<Enter> if() {<CR>}<Up><Right><Right>
 inoremap <silent> ll <C-o>a
+nnoremap ]] :NERDTree <Enter>
+
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
+\   'json': ['eslint'],
+\}
+
+let js_fixers = ['prettier', 'eslint']
+let g:ale_fixers = {
+\   'javascript': js_fixers,
+\   'javascript.jsx': js_fixers,
+\   'typescript': js_fixers,
+\   'typescriptreact': js_fixers,
+\   'json': ['prettier'],
+\   'css': ['prettier']
+\}
+
+let g:ale_fix_on_save = 1
+nnoremap z <Plug>(ale_fix)
