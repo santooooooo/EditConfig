@@ -63,6 +63,7 @@ set noswapfile
 nnoremap @ :e!<CR><Esc>
 nnoremap - :vert term<CR><Esc>
 nnoremap ]] :NERDTree <Enter>
+inoremap <silent> ll <C-o>a
 
 " setting for php
 autocmd Filetype php inoremap <<Enter> <><Left>
